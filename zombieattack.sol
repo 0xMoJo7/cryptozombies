@@ -2,7 +2,7 @@ pragma solidity ^0.4.19;
 
 import "./zombiehelper.sol";
 
-contract ZombieBattle is ZombieHelper {
+contract ZombieAttack is ZombieHelper {
   uint randNonce = 0;
   uint attackVictoryProbability = 70;
 
@@ -20,6 +20,11 @@ contract ZombieBattle is ZombieHelper {
       myZombie.level++;
       enemyZombie.lossCount++;
       feedAndMultiply(_zombieId, enemyZombie.dna, "zombie");
+    } else {
+      myZombie.lossCount++;
+      enemyZombie.winCount++;
+      _triggerCooldown(myZombie);
     }
   }
 }
+
