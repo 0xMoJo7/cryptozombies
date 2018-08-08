@@ -1,4 +1,4 @@
-pragma solidity ^0.4.19;
+ipragma solidity ^0.4.19;
 
 import "./zombiefactory.sol";
 
@@ -56,4 +56,3 @@ contract ZombieFeeding is ZombieFactory {
     feedAndMultiply(_zombieId, kittyDna, "kitty");
   }
 }
-

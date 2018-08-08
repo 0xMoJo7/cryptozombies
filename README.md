@@ -1,2 +1,0 @@
-# cryptozombies
-https://cryptozombies.io
